@@ -24,7 +24,6 @@ let sum_handle = () =>{
         operand_message = prompt("Enter a number to be summed");
         if(operand_message) operands.push(operand_message);
     } while (operand_message);
-    debugger;
     if (operands.length<1) throw new Error("Not enough operands!!");
     operands.forEach(operand => {
         if (!isNaN(Number(operand))) sum += Number(operand);
