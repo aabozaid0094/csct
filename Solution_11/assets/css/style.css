@@ -28,3 +28,15 @@ body{
 button.active {
     background-color: #aaa;
 }
+.pythagoras #pythagoras_triangle {
+    width: 500px;
+    height: 300px;
+    fill: red;
+}
+.pythagoras figcaption {
+    font-size: 20px;
+    font-weight: bold;
+}
+.pythagoras math {
+    color: red;
+}
