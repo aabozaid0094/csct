@@ -25,3 +25,6 @@ body{
 .copyrights{
     margin: 20px 0;
 }
+button.active {
+    background-color: #aaa;
+}
