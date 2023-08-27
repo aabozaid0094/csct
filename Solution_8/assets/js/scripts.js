@@ -13,7 +13,7 @@ let parameters_handle = () => {
     if (!isNaN(parameters_count_message) && Number.isInteger(Number(parameters_count_message)) && Number(parameters_count_message) > 0) 
     parameters_exception(...generate_parameters(Number(parameters_count_message)));
     else alert('Wrong number!!');
-}
+};
 if (document.getElementById('parameters_button')) parameters_button.addEventListener("click", parameters_handle);
 //#endregion
 
@@ -31,7 +31,7 @@ let sum_handle = () =>{
         else throw new Error("One or more operands are not number!!");
     });
     alert(`The summation is ${sum}`)
-}
+};
 if (document.getElementById('sum_button')) sum_button.addEventListener("click", sum_handle);
 //#endregion
 
@@ -41,7 +41,7 @@ let ascii_observe_toggle_handle = (event) =>{
     const toggle_classList = event.currentTarget.classList;
     ascii_observe_toggle = !ascii_observe_toggle;
     toggle_classList.toggle("active");
-}
+};
 let keyboard_key_pressed = (event) => {
     if (ascii_observe_toggle) {
         if (event.altKey) alert("ALT key was pressed");
@@ -49,9 +49,9 @@ let keyboard_key_pressed = (event) => {
         else if (event.shiftKey) alert("SHIFT key was pressed");
         else alert(`Key pressed was of code ${event.keyCode}`);
     }
-}
+};
 if (document.getElementById('ascii_button')) ascii_button.addEventListener("click", ascii_observe_toggle_handle);
-document.addEventListener("keydown", keyboard_key_pressed)
+document.addEventListener("keydown", keyboard_key_pressed);
 //#endregion
 
 //#region Context
@@ -60,12 +60,25 @@ let context_toggle_handle = (event) =>{
     const toggle_classList = event.currentTarget.classList;
     context_toggle = !context_toggle;
     toggle_classList.toggle("active");
-}
+};
 let contextmenu_handle = (event) => {
     if (!context_toggle) {
         event.preventDefault();
     }
-}
+};
 if (document.getElementById('context_button')) context_button.addEventListener("click", context_toggle_handle);
-document.addEventListener("contextmenu", contextmenu_handle)
+document.addEventListener("contextmenu", contextmenu_handle);
+//#endregion
+
+//#region Submission Confirm
+let submit_confirm_handle = (event) => {
+    if (confirm("Submit form?")) {
+        alert(`Submitted! Your Name: ${event.currentTarget.name.value}, Your Nickname: ${event.currentTarget.nickname.value}, Thanks.`);
+    }
+    else {
+        alert("Submission canceled!");
+    }
+    event.preventDefault();
+};
+if(document.forms.submit_confirm) document.forms.submit_confirm.addEventListener("submit", submit_confirm_handle);
 //#endregion
