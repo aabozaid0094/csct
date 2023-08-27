@@ -53,3 +53,19 @@ let keyboard_key_pressed = (event) => {
 if (document.getElementById('ascii_button')) ascii_button.addEventListener("click", ascii_observe_toggle_handle);
 document.addEventListener("keydown", keyboard_key_pressed)
 //#endregion
+
+//#region Context
+let context_toggle = false;
+let context_toggle_handle = (event) =>{
+    const toggle_classList = event.currentTarget.classList;
+    context_toggle = !context_toggle;
+    toggle_classList.toggle("active");
+}
+let contextmenu_handle = (event) => {
+    if (!context_toggle) {
+        event.preventDefault();
+    }
+}
+if (document.getElementById('context_button')) context_button.addEventListener("click", context_toggle_handle);
+document.addEventListener("contextmenu", contextmenu_handle)
+//#endregion
