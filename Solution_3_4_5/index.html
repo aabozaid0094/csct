@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day3&4&5</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="text-center">
+        <button id="headings_button">Headings</button>
+        <button id="sum_button">Sum</button>
+        <button id="color_button">Color</button>
+    </div>
+    <div class="text-center">
+        <button id="palindrome_button">Palindrome</button>
+        <button id="e_count_button">E Count</button>
+        <button id="parity_button">Parity</button>
+    </div>
+    <div class="text-center">
+        <button id="circle_area_button">Circle Area</button>
+        <button id="sqrt_button">Square Root</button>
+        <button id="cos_button">Cosine</button>
+    </div>
+    <h2>Heading</h2>
+    <hr>
+    <div id="headers" class="d-flex align-items-center justify-content-around">
+        <h1 id="h1">This is header number 1</h1>
+        <h2 id="h2">This is header number 2</h2>
+        <h3 id="h3">This is header number 3</h3>
+        <h4 id="h4">This is header number 4</h4>
+        <h5 id="h5">This is header number 5</h5>
+        <h6 id="h6">This is header number 6</h6>
+    </div>
+    <hr>
+    <div id="user_info_container" class="d-flex justify-content-around">
+        <form action="" name="user_info">
+            <h2>Enter Your Info</h2>
+            <p class="form-control">
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="name">
+                <span class="errors red"></span>
+            </p>
+            <p class="form-control">
+                <label for="phone">Phone: </label>
+                <input type="tel" name="phone" id="phone">
+                <span class="errors red"></span>
+            </p>
+            <p class="form-control">
+                <label for="mobile">Mobile: </label>
+                <input type="tel" name="mobile" id="mobile">
+                <span class="errors red"></span>
+            </p>
+            <p class="form-control">
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email">
+                <span class="errors red"></span>
+            </p>
+            <input type="submit" value="Submit">
+        </form>
+        <div id="entered_user_info">
+            <h2>Entered User Info</h2>
+            <p><span class="user_color">Welcome dear guest: </span><span id="entered_name"></span></p>
+            <p><span class="user_color">Phone: </span><span id="entered_phone"></span></p>
+            <p><span class="user_color">Mobile: </span><span id="entered_mobile"></span></p>
+            <p><span class="user_color">Email: </span><span id="entered_email"></span></p>
+        </div>
+    </div>
+    <hr>
+    <div id="array_sort_container" class="d-flex justify-content-around">
+        <form action="" name="array_sort">
+            <h2>Enter Your Values</h2>
+            <div class="d-flex align-items-center justify-content-around">
+                <input type="number" name="numbers" placeholder="First Value" required>
+                <input type="number" name="numbers" placeholder="Second Value" required>
+                <input type="number" name="numbers" placeholder="Third Value" required>
+                <input type="number" name="numbers" placeholder="Forth Value" required>
+                <input type="number" name="numbers" placeholder="Fifth Value" required>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </div>
+        </form>
+        <div id="entered_array_sort">
+            <h2>Entered Values Sorted</h2>
+            <p><span class="user_color">You,ve Entered: </span><span id="not_sorted" class="array_processed"></span></p>
+            <p><span class="user_color">Ascending Sorted: </span><span id="ascending_sorted" class="array_processed"></span></p>
+            <p><span class="user_color">Descending Sorted: </span><span id="descending_sorted" class="array_processed"></span></p>
+        </div>
+    </div>
+    <hr>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+body{
+    background-color: #aaa;
+}
+.text-left{
+    text-align: left;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.home-header{
+    color: #333;
+}
+.home-main-enter{
+    margin: 50px auto;
+}
+.content{
+    margin: 50px 0;
+}
+.sans-font{
+    font-family: sans-serif;
+}
+span.different-size{
+    font-size: 12px;
+}
+.red{
+    color: red;
+}
+.google-search{
+    margin: 30px 0;
+}
+.email-image{
+    max-width: 150px;
+}
+.copyrights{
+    margin: 20px 0;
+}
+.registration table{
+    margin: 50px auto;
+    padding: 15px;
+    border: 15px solid #777;
+    border-left-color: rgba(140, 140, 140, .5);
+    border-top-color: rgba(140, 140, 140, .5);
+    border-spacing: 15px;
+}
+.registration table td{
+    border: 2px solid #777;
+    border-right-color: rgba(140, 140, 140, .5);
+    border-bottom-color: rgba(140, 140, 140, .5);
+}
+.login fieldset{
+    display: inline-block;
+    margin: 50px auto;
+    padding: 15px;
+}

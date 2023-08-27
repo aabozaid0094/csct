@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LogIn Form - Page 5</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <form class="login text-center" action="./main.html">
+            <fieldset class="text-left">
+                <legend class="red">Log in</legend>
+                <div class="form-control">
+                    <label for="username">UserName: </label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username here!">
+                </div>
+                <div class="form-control">
+                    <label for="password">PassWord: </label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div class="form-control">
+                    <label for="location">Select you location: </label>
+                    <select name="location" id="location">
+                        <optgroup label="Africa">
+                            <option value="egypt" selected>Egypt</option>
+                            <option value="sudan">Sudan</option>
+                            <option value="namibia">Namibia</option>
+                        </optgroup>
+                        <optgroup label="Europe">
+                            <option value="england">England</option>
+                            <option value="france">France</option>
+                            <option value="germany">Germany</option>
+                        </optgroup>
+                        <optgroup label="North America" disabled>
+                            <option value="canada">Canada</option>
+                            <option value="mexico">Mexico</option>
+                            <option value="usa">USA</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <input
+                        type="checkbox"
+                        id="remember_me"
+                        name="remember_me"
+                    />
+                    <label for="remember_me">Remember Me</label>
+                </div>
+                <div class="form-control">
+                    <input type="submit" value="Log In">
+                </div>
+            </fieldset>
+        </form>
+    </body>
+</html>

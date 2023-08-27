@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Application - Page 4</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <form class="registration text-left" action="./welcome.html">
+            <table>
+                <tr>
+                    <td><label for="first_name">First Name</label></td>
+                    <td><input type="text" id="first_name" name="first_name" /></td>
+                </tr>
+                <tr>
+                    <td><label for="last_name">Last Name</label></td>
+                    <td><input type="text" id="last_name" name="last_name" /></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password</label></td>
+                    <td><input type="password" id="password" name="password" /></td>
+                </tr>
+                <tr>
+                    <td class="text-center" rowspan="2">
+                        <label><b>Gender</b></label>
+                    </td>
+                    <td>
+                        <input
+                            type="radio"
+                            id="male"
+                            name="gender"
+                            value="male"
+                        />
+                        <label for="male">Male</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input
+                            type="radio"
+                            id="female"
+                            name="gender"
+                            value="female"
+                        />
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="birth_month">Birthday</label>
+                        <select name="birth_month" id="birth_month">
+                            <option value="">[Select a Month]</option>
+                            <option value="january">January</option>
+                            <option value="february">February</option>
+                            <option value="march">March</option>
+                            <option value="april">April</option>
+                            <option value="may">May</option>
+                            <option value="june">June</option>
+                            <option value="july">July</option>
+                            <option value="august">August</option>
+                            <option value="september">September</option>
+                            <option value="october">October</option>
+                            <option value="november">November</option>
+                            <option value="december">December</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input
+                            type="number"
+                            name="birth_day"
+                            id="birth_day"
+                            min="1"
+                            max="31"
+                            placeholder="dd"
+                        />
+                        <input
+                            type="number"
+                            name="birth_year"
+                            id="birth_year"
+                            min="1900"
+                            max="2100"
+                            placeholder="yyyy"
+                        />
+                    </td>
+                </tr>
+                <tr class="text-center">
+                    <td colspan="2">
+                        <h2><u>Interests</u></h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input
+                            type="checkbox"
+                            id="sports"
+                            name="sports"
+                        />
+                        <label for="sports">Sports</label>
+                    </td>
+                    <td>
+                        <input
+                            type="checkbox"
+                            id="music"
+                            name="music"
+                        />
+                        <label for="music">Music</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input
+                            type="checkbox"
+                            id="books"
+                            name="books"
+                        />
+                        <label for="books">Books</label>
+                    </td>
+                    <td>
+                        <input
+                            type="checkbox"
+                            id="computer"
+                            name="computer"
+                        />
+                        <label for="computer">Computer Stuff</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input
+                            type="checkbox"
+                            id="fashion"
+                            name="fashion"
+                        />
+                        <label for="fashion">Fashion</label>
+                    </td>
+                    <td>
+                        <input
+                            type="checkbox"
+                            id="movies"
+                            name="movies"
+                        />
+                        <label for="movies">Movies</label>
+                    </td>
+                </tr>
+                <tr class="text-center">
+                    <td colspan="2"><input type="submit" value="Submit"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

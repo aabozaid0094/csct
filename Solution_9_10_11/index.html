@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day9&10</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <h2>Day9&10</h2>
+    <hr>
+    <div class="d-flex align-items-center justify-content-between gutter-x-8px wrapper-container">
+        <div class="text-center video_container">
+            <video src="./assets/videos/frozen.mp4" type="video/mp4">
+                <p>
+                    Your browser doesn't support HTML video. Here is a
+                    <a href="./assets/videos/frozen.mp4">link to the video</a> instead.
+                </p>
+            </video>
+            <div class="d-flex align-items-center justify-content-center gutter-x-8px">
+                <input type="range" id="time_bar" min="0">
+                <div><span id="current_time"></span>/<span id="full_time"></span></div>
+            </div>
+            <div class="d-flex align-items-center justify-content-center gutter-x-8px">
+                <input type="button" value="Play" id="play">
+                <input type="button" value="Stop" id="stop">
+                <input type="button" value="&lt;&lt;" id="more_backward">
+                <input type="button" value="&lt;" id="backward">
+                <input type="button" value="&gt;" id="forward">
+                <input type="button" value="&gt;&gt;" id="more_forward">
+                <input type="range" id="volume_bar" min="0" max="100">
+                <input type="button" value="Mute" id="mute">
+            </div>
+            <div class="d-flex align-items-center justify-content-center gutter-x-8px">
+                <label for="speed_bar">Speed</label>
+                <input type="range" id="speed_bar" min=".25" max="3" step=".25">
+            </div>
+        </div>
+        <hr>
+        <div class="color_container">
+            <div class="color_input_control">
+                <label for="red_color_bar">Red</label>
+                <input type="range" id="red_color_bar" min="0" max="225" value="0">
+            </div>
+            <div class="color_input_control">
+                <label for="green_color_bar">Green</label>
+                <input type="range" id="green_color_bar" min="0" max="225" value="0">
+            </div>
+            <div class="color_input_control">
+                <label for="blue_color_bar">blue</label>
+                <input type="range" id="blue_color_bar" min="0" max="225" value="0">
+            </div>
+            <h2 id="colored_heading">Change the three color ranges above and observe this text color change</h2>
+        </div>
+    </div>
+    <hr>
+    <div class="d-flex align-items-center justify-content-around gutter-x-8px wrapper-container">
+        <div class="form_container">
+            <form action="" name="css_validate">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Username" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input type="submit" value="Change">
+            </form>
+        </div>
+        <div class="image_container">
+            <img src="./assets/images/fr.jpg" alt="Flynn Rider">
+        </div>
+        <div class="d-flex align-items-center justify-content-center button_container">
+            <button>Hover Here</button>
+        </div>
+    </div>
+    <hr>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+
+</html>

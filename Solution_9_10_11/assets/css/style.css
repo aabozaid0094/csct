@@ -1,0 +1,109 @@
+body {
+    background-color: #aaa;
+}
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.d-flex {
+    display: flex;
+}
+.align-items-center {
+    align-items: center;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.justify-content-around {
+    justify-content: space-around;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.gutter-x-8px > * {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.red {
+    color: red;
+}
+.copyrights {
+    margin: 20px 0;
+}
+@media (max-width: 786px) {
+    .wrapper-container {
+        flex-direction: column;
+    }
+    .wrapper-container hr {
+        width: 100%;
+    }
+}
+.video_container,
+.video_container video {
+    max-width: 100%;
+}
+#time_bar {
+    flex-grow: 0.5;
+}
+.color_container {
+    flex-grow: 1;
+}
+.form_container input {
+    margin: 5px 0 20px;
+}
+.color_input_control > *,
+.form_container > form > * {
+    display: block;
+    width: 100%;
+}
+.form_container input:invalid {
+    border: solid red 2px;
+}
+.image_container img {
+    max-height: 300px;
+    opacity: 1;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    transition: opacity 2s ease-in-out;
+    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -ms-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+}
+.image_container img:hover {
+    opacity: 0;
+}
+.button_container button {
+    background-color: rgb(135, 206, 235);
+    padding: 5px 30px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border: 2px solid #501786;
+    box-shadow: 0 0 0 #b87def;
+}
+.button_container button:hover {
+    animation: extra_shadow 2s infinite;
+    -webkit-animation: extra_shadow 2s infinite;
+}
+@keyframes extra_shadow {
+    0% {
+        box-shadow: 0 0 0 #501786;
+    }
+    50% {
+        box-shadow: 0 0 10px #501786;
+    }
+    100% {
+        box-shadow: 0 0 0 #501786;
+    }
+}
