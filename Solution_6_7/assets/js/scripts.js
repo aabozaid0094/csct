@@ -22,7 +22,7 @@ let change_slide_image = (event) => {
     let image = event.currentTarget.querySelector('img');
     image.src = `./assets/images/slide_show/${slider.images[slider.current]}`;
 }
-slider_element.addEventListener("current_slider_change", change_slide_image);
+if (document.getElementById('slider_element')) slider_element.addEventListener("current_slider_change", change_slide_image);
 
 let slider_previous_handle = (slider) => {
     if (slider.current > 0) {
@@ -69,9 +69,7 @@ let pause_marbles_animation = (event) => clearInterval(marbles_animation_interva
 //#endregion
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    if (document.getElementById("typing_message_button")) {
-        typing_message_button.addEventListener("click", typing_message_handle);
-    }
+    if (document.getElementById("typing_message_button")) typing_message_button.addEventListener("click", typing_message_handle);
     const urlParams = new URLSearchParams(window.location.search);
     const name_param = urlParams.get('name');
     const email_param = urlParams.get('email');
@@ -85,25 +83,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     }
 
-    if (document.getElementById('c_button')) {
-        c_button.addEventListener("click", () => { document.getElementById("txt1").value = ""; });
-    }
-    if (document.getElementById('backspace_button')) {
-        backspace_button.addEventListener("click", () => { document.getElementById("txt1").value = document.getElementById("txt1").value.slice(0, -1); });
-    }
+    if (document.getElementById('c_button')) c_button.addEventListener("click", () => { document.getElementById("txt1").value = ""; });
+    if (document.getElementById('backspace_button')) backspace_button.addEventListener("click", () => { document.getElementById("txt1").value = document.getElementById("txt1").value.slice(0, -1); });
 
-    if (document.getElementById('slider_previous_button')) {
-        slider_previous_button.addEventListener("click", () => slider_previous_handle(slider));
-    }
-    if (document.getElementById('slider_play_button')) {
-        slider_play_button.addEventListener("click", slider_play_handle);
-    }
-    if (document.getElementById('slider_pause_button')) {
-        slider_pause_button.addEventListener("click", slider_pause_handle);
-    }
-    if (document.getElementById('slider_next_button')) {
-        slider_next_button.addEventListener("click", slider_next_handle);
-    }
+    if (document.getElementById('slider_previous_button')) slider_previous_button.addEventListener("click", () => slider_previous_handle(slider));
+    if (document.getElementById('slider_play_button')) slider_play_button.addEventListener("click", slider_play_handle);
+    if (document.getElementById('slider_pause_button')) slider_pause_button.addEventListener("click", slider_pause_handle);
+    if (document.getElementById('slider_next_button')) slider_next_button.addEventListener("click", slider_next_handle);
 
     let marbles_element = document.querySelector('.marbles');
     if (marbles_element) {
