@@ -16,3 +16,21 @@ let parameters_handle = () => {
 }
 if (document.getElementById('parameters_button')) parameters_button.addEventListener("click", parameters_handle);
 //#endregion
+
+//#region Sum
+let sum_handle = () =>{
+    let operand_message, operands = new Array(), sum = 0;
+    do {
+        operand_message = prompt("Enter a number to be summed");
+        if(operand_message) operands.push(operand_message);
+    } while (operand_message);
+    debugger;
+    if (operands.length<1) throw new Error("Not enough operands!!");
+    operands.forEach(operand => {
+        if (!isNaN(Number(operand))) sum += Number(operand);
+        else throw new Error("One or more operands are not number!!");
+    });
+    alert(`The summation is ${sum}`)
+}
+if (document.getElementById('sum_button')) sum_button.addEventListener("click", sum_handle);
+//#endregion
