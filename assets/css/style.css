@@ -6,3 +6,7 @@
 footer {
     margin-top: auto;
 }
+.gray-tooltip {
+    --bs-tooltip-bg: var(--bs-gray);
+    --bs-tooltip-color: var(--bs-white);
+}
