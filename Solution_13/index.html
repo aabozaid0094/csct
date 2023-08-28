@@ -11,13 +11,29 @@
 </head>
 <body>
     <div id="wrapper">
-        <header>
-            <nav class="navbar">
+        <header class="sticky-top bg-dark bg-opacity-75">
+            <nav class="navbar navbar-expand-md">
                 <div class="container">
                     <a class="navbar-brand" href="#" title="Day13" rel="home">
-                        <i class="bootstrap"></i>
+                        <i class="bi-bootstrap-fill"></i>
                         <span>Day13</span>
                     </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_menu" aria-controls="navbar_menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbar_menu">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#home_slider">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#features">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </header>
