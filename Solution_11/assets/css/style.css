@@ -1,28 +1,31 @@
-body{
+body {
     background-color: #aaa;
 }
-.text-left{
+.text-left {
     text-align: left;
 }
-.text-center{
+.text-center {
     text-align: center;
 }
-.text-right{
+.text-right {
     text-align: right;
 }
-.d-flex{
+.d-none {
+    display: none;
+}
+.d-flex {
     display: flex;
 }
-.align-items-center{
+.align-items-center {
     align-items: center;
 }
-.justify-content-around{
+.justify-content-around {
     justify-content: space-around;
 }
-.red{
+.red {
     color: red;
 }
-.copyrights{
+.copyrights {
     margin: 20px 0;
 }
 button.active {
@@ -39,4 +42,8 @@ button.active {
 }
 .pythagoras math {
     color: red;
+}
+.meme #meme_canvas {
+    width: 600px;
+    height: 407px;
 }
