@@ -29,8 +29,8 @@ button.active {
     background-color: #aaa;
 }
 .pythagoras #pythagoras_triangle {
-    width: 500px;
-    height: 300px;
+    width: 100px;
+    height: 200px;
     fill: red;
 }
 .pythagoras figcaption {
