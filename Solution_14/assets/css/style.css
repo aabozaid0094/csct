@@ -1,0 +1,14 @@
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+footer {
+    margin-top: auto;
+}
+#swap, #min_max {
+    gap: 5px;
+}
+#swap_x, #swap_y {
+    font-weight: 700;
+}
