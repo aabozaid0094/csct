@@ -22,8 +22,21 @@ if(document.getElementById('object')) object.addEventListener("click", object_ha
 //#endregion
 
 //#region Iterator
+let iterable_user = {
+    name: "Ahmed",
+    educational_degree: "Bechalor",
+    job_title: "Software Developer",
+    [Symbol.iterator]: () => {
+        let keys = Object.keys(iterable_user);
+        let key_index = 0;
+        return {
+            next: () => (key_index==keys.length) ? {entry:undefined, done:true} : {entry:{property:keys[key_index], value:iterable_user[keys[key_index++]]}, done:false}
+        };
+    }
+};
+let user_iterator = iterable_user[Symbol.iterator]();
 let iterator_handle = () => {
-    alert("iterator_handle");
+    console.log(user_iterator.next());
 };
 if(document.getElementById('iterator')) iterator.addEventListener("click", iterator_handle);
 //#endregion
