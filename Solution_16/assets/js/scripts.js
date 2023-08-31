@@ -36,7 +36,6 @@ let fibonacci_max = (max) => {
     if (max < 1) throw new Error("Not enough fibonacci max");
     let result = [0, 1], next_fibonacci = 1;
     for (let index = 2; next_fibonacci < max; index++) {
-        console.log(next_fibonacci);
         result.push(next_fibonacci);
         next_fibonacci = result[index] + result[index - 1];
     }
