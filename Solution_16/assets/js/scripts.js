@@ -21,7 +21,7 @@ let promise_handle = () => {
         .then(json => console.log(json))
         .catch(error => console.log(error));
 };
-if (document.getElementById('promise')) promise.addEventListener("click", promise_handle);
+if (document.getElementById('promise_button')) promise_button.addEventListener("click", promise_handle);
 //#endregion
 
 document.addEventListener("DOMContentLoaded", function (event) {

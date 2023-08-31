@@ -11,5 +11,5 @@ let areas_handle = () => {
     console.log("Circle(3)", new Circle(3).toString());
     console.log("Triangle(3,4)", new Triangle(3,4).toString());
 };
-if(document.getElementById('areas')) areas.addEventListener("click", areas_handle);
+if(document.getElementById('areas_button')) areas_button.addEventListener("click", areas_handle);
 //#endregion
