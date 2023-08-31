@@ -24,28 +24,37 @@ let promise_handle = () => {
 if (document.getElementById('promise_button')) promise_button.addEventListener("click", promise_handle);
 //#endregion
 
-//#region Fibonacci
-let fibonacci_length = (length) => {
+//#region Fibonacci Length
+let fibonacci_length = function*(length, index = 0){
     if (length < 2) throw new Error("Not enough fibonacci length");
-    let result = [0, 1];
-    for (let index = 2; index < length; index++)
-        result.push(result[index - 1] + result[index - 2]);
-    return result;
-};
-let fibonacci_max = (max) => {
-    if (max < 1) throw new Error("Not enough fibonacci max");
-    let result = [0, 1], next_fibonacci = 1;
-    for (let index = 2; next_fibonacci < max; index++) {
-        result.push(next_fibonacci);
-        next_fibonacci = result[index] + result[index - 1];
+    let [former_previous, previous] = [0, 1];
+    while (index < length) {
+        yield former_previous;
+        [former_previous, previous] = [previous, former_previous + previous];
+        index++;
     }
-    return result;
 };
-let fibonacci_handle = () => {
-    console.log(fibonacci_length(10));
-    console.log(fibonacci_max(10));
+let fibonacci_length_iterator = fibonacci_length(10);
+let fibonacci_length_handle = () => {
+    console.log(`Fibonacci Length: ${fibonacci_length_iterator.next().value}`);
 };
-if (document.getElementById('fibonacci_button')) fibonacci_button.addEventListener("click", fibonacci_handle);
+if (document.getElementById('fibonacci_length_button')) fibonacci_length_button.addEventListener("click", fibonacci_length_handle);
+//#endregion
+
+//#region Fibonacci Max
+let fibonacci_max = function*(max) {
+    if (max < 1) throw new Error("Not enough fibonacci max");
+    let [former_previous, previous] = [0, 1];
+    while (former_previous < max) {
+        yield former_previous;
+        [former_previous, previous] = [previous, former_previous + previous];
+    }
+};
+let fibonacci_max_iterator = fibonacci_max(10);
+let fibonacci_max_handle = () => {
+    console.log(`Fibonacci Max: ${fibonacci_max_iterator.next().value}`);
+};
+if (document.getElementById('fibonacci_max_button')) fibonacci_max_button.addEventListener("click", fibonacci_max_handle);
 //#endregion
 
 document.addEventListener("DOMContentLoaded", function (event) {
